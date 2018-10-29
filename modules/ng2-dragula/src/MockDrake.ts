@@ -65,7 +65,7 @@ export class MockDrake implements DrakeWithModels {
 
   private subs = new Subscription();
 
-  on(event: string, callback: Function): void {
+  on(event: string, callback: Function): any {
     this.subs.add(this.emitter$
       .pipe(
         filter(({ eventType }) => eventType === event)
